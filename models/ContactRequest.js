@@ -5,7 +5,7 @@ const contactRequestSchema = new mongoose.Schema({
   email: { type: String, trim: true },
   phone: { type: String, required: true, trim: true },
   message: { type: String, trim: true },
-  type: { type: String, enum: ["contact","general"], default: "contact" },
+  type: { type: String, enum: ["contact", "general", "callback"], default: "contact" },
   status: { type: String, enum: ["new","contacted","closed"], default: "new" },
   createdAt: { type: Date, default: Date.now }
 });
